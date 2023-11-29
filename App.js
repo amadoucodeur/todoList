@@ -13,40 +13,11 @@ import {
 import Tasks from "./components/Tasks";
 import { useState } from "react";
 
-const datas = [
-  {
-    text: "mimi",
-    isDone: true,
-  },
-  {
-    text: "mimi",
-    isDone: false,
-  },
-  {
-    text: "mimi",
-    isDone: true,
-  },
-  {
-    text: "Manger",
-    isDone: true,
-  },
-  {
-    text: "Dormir",
-    isDone: false,
-  },
-  {
-    text: "Courrir",
-    isDone: false,
-  },
-  {
-    text: "Omega",
-    isDone: false,
-  },
-];
+
 
 export default function App() {
   const [tasks, setTasks] = useState("");
-  const [tasksItems, setTasksItems] = useState(datas);
+  const [tasksItems, setTasksItems] = useState([]);
   const handleAddTasks = () => {
     if (tasks) {
       const newTask = { text: tasks, isDone: false };
